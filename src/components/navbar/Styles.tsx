@@ -69,3 +69,48 @@ export const Menu = styled.div`
     color: #FFF;  
 
 `
+
+export const User = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    cursor: pointer;
+    
+
+`
+
+export const Username = styled.span`
+    
+
+`
+
+export const UserProfilePic = styled.img`
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+
+`
+
+export const Options = styled.div`
+    position: absolute;
+    top: 50px;
+    right: 0;
+    padding: 20px;
+    background-color: #FFF;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: gray;
+    width: 200px;
+    font-weight: 300;
+
+`
+
+export const OptionsSpan = styled.span`
+    
+
+`
