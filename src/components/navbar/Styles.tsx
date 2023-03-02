@@ -2,9 +2,13 @@ import styled from "styled-components";
 
 export const NavbarContainer = styled.div`
      display: flex;
-     justify-content: center;
-     background-color: #294492;
-     color: #FFF;
+     flex-direction: column;
+     align-items: center;
+     background-color: ${ (props) => props.active ? 'white' : '#294492' };
+     color: ${ (props) => props.active ? '#000' : '#FFF' };;
+     transition: 0.5s all ease;
+     position: sticky;
+     top: 0;
 
 `
 
@@ -43,15 +47,25 @@ export const TextLinks = styled.span`
 
 export const ButtonLinks = styled.button`
     background-color: transparent;
-    color: white;
+    color: ${(props) => props.active ? 'black' : 'white'};
     padding: 10px 20px;
     border-radius: 5px;
     border: 1px solid white;
     cursor: pointer;
 
     &:hover{
-        background-color: #020B44;
+        background-color: ${(props) => props.active ? '' : '#020B44'};
         border-color: #020B44;
     }
+
+`
+
+export const Menu = styled.div`
+    width: 1400px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+    color: #FFF;  
 
 `
