@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import { ButtonLinks, Container, Links, Logo, Menu, NavbarContainer, Options, OptionsSpan, Text, TextLinks, User, Username, UserProfilePic } from "./Styles"
 
 interface IActive {
@@ -20,6 +20,10 @@ export const Navbar = () => {
 
   const [isActive, setIsActive] = useState<IActive>({isActive: false});
   const [open, setOpen] = useState<IOpenMenu>({isOpen: false});
+
+  const {pathname} = useLocation();
+
+  if(pathname !=='/') setIsActive({isActive: true})
 
   const activeByScrolling = () => {
     window.scrollY > 0 ? setIsActive({isActive: true}) : setIsActive({isActive: false}); 
@@ -45,7 +49,9 @@ export const Navbar = () => {
         <Container>
             <Logo>
                 
-                 <Text>Rent Houses</Text>       
+                 <Link to="/" style={{textDecoration: 'none', color: 'inherit'}}>
+                  <Text>Rent Houses</Text>                  
+                 </Link>       
                 
             </Logo>
             <Links>
@@ -61,13 +67,23 @@ export const Navbar = () => {
                 {open.isOpen && <Options>
                   {currentUser?.isSeller && (
                     <>
-                    <OptionsSpan>Gigs</OptionsSpan>
-                    <OptionsSpan>Add New Gigs</OptionsSpan>                    
+                    <Link to="/houses" style={{textDecoration: 'none', color: 'inherit'}}>
+                      <OptionsSpan>Houses</OptionsSpan>
+                    </Link>
+                    <Link to="/add" style={{textDecoration: 'none', color: 'inherit'}}>
+                      <OptionsSpan>Add New Houses</OptionsSpan>
+                    </Link>                    
                     </>
                   )}
-                  <OptionsSpan>Orders</OptionsSpan>
+                  <Link to="/orders" style={{textDecoration: 'none', color: 'inherit'}}>
+                    <OptionsSpan>Orders</OptionsSpan>
+                  </Link>
+                  <Link to="/messages" style={{textDecoration: 'none', color: 'inherit'}}>
                   <OptionsSpan>Messages</OptionsSpan>
-                  <OptionsSpan>Logout</OptionsSpan>
+                  </Link>
+                  <Link to="/" style={{textDecoration: 'none', color: 'inherit'}}>
+                    <OptionsSpan>Logout</OptionsSpan>
+                  </Link>
                   
                  </Options>}
               </User>
