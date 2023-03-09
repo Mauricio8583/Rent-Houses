@@ -24,7 +24,8 @@ export const Left = styled.div`
 `
 
 export const Right = styled.div`
-
+     height: 100%;
+     
 
 `
 
@@ -75,7 +76,9 @@ export const SeacrhButton = styled.button`
 `
 
 export const Cities = styled.div`
-
+     display: flex;
+     align-items: center;
+     gap: 10px;
 
 `
 
@@ -85,12 +88,20 @@ export const CitiesText = styled.span`
 `
 
 export const CitiesButton = styled.button`
-
+     color: #FFF;
+     background-color: transparent;
+     border: 1px solid #FFF;
+     padding: 5px 10px;
+     border-radius: 20px;
+     font-size: 14px;
+     cursor: pointer;
 
 `
 
 export const LogoImg = styled.img`
-    width: 500px;
-    height: 500px;
+    width: 700px;
+    height: 100%;
+    object-fit: contain;
+    margin: 0 70px;
 
 `

@@ -68,18 +68,18 @@ export const Navbar = () => {
                   {currentUser?.isSeller && (
                     <>
                     <Link to="/houses" style={{textDecoration: 'none', color: 'inherit'}}>
-                      <OptionsSpan>Houses</OptionsSpan>
+                      <OptionsSpan>Casas</OptionsSpan>
                     </Link>
                     <Link to="/add" style={{textDecoration: 'none', color: 'inherit'}}>
-                      <OptionsSpan>Add New Houses</OptionsSpan>
+                      <OptionsSpan>Adicionar Nova Casa</OptionsSpan>
                     </Link>                    
                     </>
                   )}
                   <Link to="/orders" style={{textDecoration: 'none', color: 'inherit'}}>
-                    <OptionsSpan>Orders</OptionsSpan>
+                    <OptionsSpan>Pedidos</OptionsSpan>
                   </Link>
                   <Link to="/messages" style={{textDecoration: 'none', color: 'inherit'}}>
-                  <OptionsSpan>Messages</OptionsSpan>
+                  <OptionsSpan>Mensagens</OptionsSpan>
                   </Link>
                   <Link to="/" style={{textDecoration: 'none', color: 'inherit'}}>
                     <OptionsSpan>Logout</OptionsSpan>
