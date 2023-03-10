@@ -103,5 +103,5 @@ export const LogoImg = styled.img`
     height: 100%;
     object-fit: contain;
     margin: 0 70px;
-
+    border-radius: 20%;    
 `

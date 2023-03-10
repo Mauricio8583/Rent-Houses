@@ -10,6 +10,7 @@ export const Container = styled.div`
     height: 344px;
     color: #FFF;
     border-radius: 5px;
+    margin: 200px 50px;
     cursor: pointer;
     position: relative;
 
@@ -19,10 +20,11 @@ export const CityImg = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10%;
 
 `
 
-export const Title = styled.span`
+export const CityName = styled.span`
     font-weight: 500;
     font-size: 24px;
     position: absolute;
@@ -31,7 +33,7 @@ export const Title = styled.span`
 
 `
 
-export const CityName = styled.span`
+export const Title = styled.span`
     font-weight: 300;
     position: absolute;
     top: 15px;
