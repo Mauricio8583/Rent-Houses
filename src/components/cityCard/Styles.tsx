@@ -10,7 +10,7 @@ export const Container = styled.div`
     height: 344px;
     color: #FFF;
     border-radius: 5px;
-    margin: 200px 50px;
+    margin: 100px 50px;
     cursor: pointer;
     position: relative;
 

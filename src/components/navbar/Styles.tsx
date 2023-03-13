@@ -9,6 +9,7 @@ export const NavbarContainer = styled.div`
      transition: 0.5s all ease;
      position: sticky;
      top: 0;
+     z-index: 999;
 
 `
 
