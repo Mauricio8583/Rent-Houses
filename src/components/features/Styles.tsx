@@ -33,22 +33,31 @@ export const Item = styled.div`
 
 `
 
-export const AnoucementVideo = styled.video`
-    width: 720px;
+export const AnnoucementImg = styled.img`
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;    
 
 `
 
 export const MainTitle = styled.h1`
-
+    font-weight: 500;
+    margin-bottom: 10px;
 
 `
 
 export const Title = styled.div`
-
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 18px;
 
 `
 
 export const Info = styled.p`
-
-
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    line-spacing: 1px;
 `

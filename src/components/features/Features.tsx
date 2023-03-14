@@ -1,4 +1,4 @@
-import { AnoucementVideo, Container, FeaturesContainer, Info, Item, MainTitle, Title } from "./Styles"
+import {AnnoucementImg, Container, FeaturesContainer, Info, Item, MainTitle, Title } from "./Styles"
 
 export const Features = () => {
   return (
@@ -32,7 +32,7 @@ export const Features = () => {
                 </Info>
             </Item>
             <Item>
-                <AnoucementVideo src="https://youtu.be/Ynr4o0eOjdg" controls />
+                <AnnoucementImg src="https://www.guiadoturismobrasil.com/up/img/1439411973.jpg" alt="" />
             </Item>
         </Container>
     </FeaturesContainer>
