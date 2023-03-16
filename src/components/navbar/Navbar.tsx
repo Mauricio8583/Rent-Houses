@@ -2,31 +2,22 @@ import { useEffect, useState } from "react"
 import { Link, useLocation } from "react-router-dom"
 import { ButtonLinks, Container, Links, Logo, Menu, NavbarContainer, Options, OptionsSpan, Text, TextLinks, User, Username, UserProfilePic } from "./Styles"
 
-interface IActive {
-  isActive: boolean
-}
-
 interface IUser {
   id: Number,
   username: String,
   isSeller: boolean
 }
 
-interface IOpenMenu {
-  isOpen: boolean
-}
-
 export const Navbar = () => {
 
-  const [isActive, setIsActive] = useState<IActive>({isActive: false});
-  const [open, setOpen] = useState<IOpenMenu>({isOpen: false});
+  const [isActive, setIsActive] = useState<Boolean>(false);
+  const [open, setOpen] = useState<Boolean>(false);
 
   const {pathname} = useLocation();
-
-  if(pathname !=='/') setIsActive({isActive: true})
+  
 
   const activeByScrolling = () => {
-    window.scrollY > 0 ? setIsActive({isActive: true}) : setIsActive({isActive: false}); 
+    window.scrollY > 0 ? setIsActive(true) : setIsActive(false); 
   }
 
   const currentUser: IUser = {
@@ -38,6 +29,8 @@ export const Navbar = () => {
   useEffect(() => {
     window.addEventListener('scroll', activeByScrolling);
 
+    if(pathname !=='/') setIsActive(true)
+
     return () => {
       window.removeEventListener('scroll', activeByScrolling);
     }
@@ -45,7 +38,7 @@ export const Navbar = () => {
   }, [])
 
   return (
-    <NavbarContainer active={isActive.isActive}>
+    <NavbarContainer active={isActive}>
         <Container>
             <Logo>
                 
@@ -59,12 +52,12 @@ export const Navbar = () => {
              <TextLinks>Explorar</TextLinks>
              <TextLinks>Sign in</TextLinks>
              {currentUser?.isSeller && <TextLinks>Become a Seller</TextLinks>}
-             {!currentUser && <ButtonLinks active={isActive.isActive}>Join</ButtonLinks>}
+             {!currentUser && <ButtonLinks active={isActive}>Join</ButtonLinks>}
              {currentUser && (
-              <User onClick={() => setOpen({isOpen: !open.isOpen})}>
+              <User onClick={() => setOpen(!open)}>
                 <UserProfilePic src="http://etc.usf.edu/presentations/extras/letters/fridge_magnets/red/11/a-300.png" alt="profilepic" />
                 <Username>{currentUser?.username}</Username>
-                {open.isOpen && <Options>
+                {open && <Options>
                   {currentUser?.isSeller && (
                     <>
                     <Link to="/houses" style={{textDecoration: 'none', color: 'inherit'}}>
@@ -90,7 +83,7 @@ export const Navbar = () => {
              )}                
             </Links>            
         </Container>
-        {isActive.isActive && (
+        {isActive && (
           <Menu>
           <span>Test</span>
           <span>Test 2</span>              

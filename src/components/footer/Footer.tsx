@@ -1,4 +1,4 @@
-import { Bottom, BottomLeft, BottomRight, Cities, Container, FooterContainer, Item, MainTitle, Top } from "./Styles"
+import { Bottom, BottomLeft, BottomRight, Cities, Container, FooterContainer, Item, Line, MainTitle, SocialMedia, SocialMediaIcon, Top } from "./Styles"
 
 export const Footer = () => {
   return (
@@ -62,9 +62,16 @@ export const Footer = () => {
             <Cities>Canela</Cities>            
           </Item>              
         </Top>
+        <Line />
         <Bottom>
           <BottomLeft>
-
+            <MainTitle>Rent Houses</MainTitle>
+            <SocialMedia>
+              <SocialMediaIcon src="https://image.similarpng.com/very-thumbnail/2020/06/Black-icon-Twitter-logo-transparent-PNG.png" alt="" />
+              <SocialMediaIcon src="https://w7.pngwing.com/pngs/477/596/png-transparent-computer-icons-facebook-blog-facebook-logo-desktop-wallpaper-facebook-icon.png" alt="" />
+              <SocialMediaIcon src="https://w7.pngwing.com/pngs/322/394/png-transparent-logo-computer-icons-instagram-logo-miscellaneous-smile-screenshot.png" alt="" />
+              <SocialMediaIcon src="https://w7.pngwing.com/pngs/887/616/png-transparent-linkedin-icon-linkedin-text-rectangle-logo.png" alt="" />
+            </SocialMedia>
           </BottomLeft>
           <BottomRight>
 

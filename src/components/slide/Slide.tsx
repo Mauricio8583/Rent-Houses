@@ -11,9 +11,9 @@ export const Slide = () => {
         <Container>
           
           <Wrapper>
-            {cards.map((card) => (
+           {cards.map((card) => (
               <CityCard item={card} key={card.id} />
-            ))}
+           ))}
           </Wrapper>
 
           
