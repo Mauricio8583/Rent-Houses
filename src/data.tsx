@@ -43,4 +43,62 @@ export const cards = [
     },    
 
     
+];
+
+export const houses = [
+    {
+        id: 1,
+        img: "https://www.tuacasa.com.br/wp-content/uploads/2015/06/fachadas-de-casas-000.jpg",
+        profilePic: "https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png",
+        desc: "Descrição da Casa",
+        price: 300000,
+        star: 3,
+        username: "Anne Bell"
+    },
+    {
+        id: 2,
+        img: "https://images.adsttc.com/media/images/623c/4fa0/3e4b/3145/3000/001b/large_jpg/_d_ambrosio_07._copy.jpg?1648119692",
+        profilePic: "https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png",
+        desc: "Descrição da Casa",
+        price: 500000,
+        star: 5,
+        username: "Anne Bell"
+    },
+    {
+        id: 3,
+        img: "https://www.salles.imb.br/admin/fotos_destaque/13232908_1604013343248088_6302168264450648482_n.jpg",
+        profilePic: "https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png",
+        desc: "Descrição da Casa",
+        price: 300000,
+        star: 3,
+        username: "Anne Bell"
+    },
+    {
+        id: 4,
+        img: "https://b6d3c5t3.rocketcdn.me/wp-content/uploads/2019/11/Espetacular-casa-moderna-a-venda-Vilas-do-Atl%C3%A2ntico-26.jpg",
+        profilePic: "https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png",
+        desc: "Descrição da Casa",
+        price: 400000,
+        star: 4,
+        username: "Anne Bell"
+    },
+    {
+        id: 5,
+        img: "https://www.homeit.com.br/wp-content/uploads/2022/06/fachada-de-casas-simples-estilo-e-charme-1200x675.png",
+        profilePic: "https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png",
+        desc: "Descrição da Casa",
+        price: 300000,
+        star: 3,
+        username: "Anne Bell"
+    },
+    {
+        id: 6,
+        img: "https://casasavendaorlando.com.br/wp-content/uploads/Casas-de-Luxo-em-Orlando-a-Venda.jpg",
+        profilePic: "https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png",
+        desc: "Descrição da Casa",
+        price: 1000000,
+        star: 5,
+        username: "Anne Bell"
+    },
+    
 ]
