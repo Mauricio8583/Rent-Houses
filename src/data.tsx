@@ -102,3 +102,19 @@ export const houses = [
     },
     
 ]
+
+export const houseImgs = [
+    {
+        id: 1,
+        img: "https://www.tuacasa.com.br/wp-content/uploads/2015/06/fachadas-de-casas-000.jpg"
+    },
+    {
+        id: 2,
+        img: "https://images.adsttc.com/media/images/613f/df13/8580/2b01/6405/340e/newsletter/whatsapp-image-2021-02-09-at-10-9.jpg?1631575834"
+    },
+    {
+        id: 3,
+        img: "https://images.adsttc.com/media/images/613f/df15/c5a0/d71a/3318/05a5/slideshow/whatsapp-image-2021-02-09-at-10-26.jpg?1631575852"
+    },
+
+]
