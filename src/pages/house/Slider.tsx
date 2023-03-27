@@ -26,6 +26,10 @@ const Slide = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    max-height: 500px;
+    max-width: 300px;
+    object-fit: contain;
+    
 
 `
 
