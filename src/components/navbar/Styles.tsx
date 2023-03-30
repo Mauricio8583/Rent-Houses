@@ -115,3 +115,8 @@ export const OptionsSpan = styled.span`
     
 
 `
+
+export const MenuSpan = styled.span`
+     color: #000;
+
+`

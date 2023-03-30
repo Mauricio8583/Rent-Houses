@@ -1,6 +1,6 @@
 import { Slider } from "./Slider"
 import { houseImgs } from "../../data"
-import {AboutHouse, AboutHouseContent, BreadCrumb, Comment, Container, Country, CountryImg, CountryName, Desc, Helpful, HelpfulIcon, HelpfulOption, HelpfulTitle, HouseContainer, HouseStars, Item, ItemDesc, ItemTitle, ItensParagraph, Left, Line, ProfilePic, Reviews, ReviewsItem, ReviewsItemUser, ReviewsItemUserImg, ReviewsItemUserInfo, ReviewsItemUserInfoName, ReviewsTitle, Right, Seller, SellerTitle, StarImg, StarNumber, User, UserName, UserSeller, UserSellerBox, UserSellerBoxItens, UserSellerContact, UserSellerImg, UserSellerInfo, UserSellerName } from "./Styles"
+import {AboutHouse, AboutHouseContent, BreadCrumb, CheckImg, CheckInfo, Comment, Container, Country, CountryImg, CountryName, Desc, Detail, DetailButton, DetailItem, Helpful, HelpfulIcon, HelpfulOption, HelpfulTitle, HouseContainer, HousePrice, HouseStars, HouseTitle, Item, ItemDesc, ItemTitle, ItensParagraph, Left, Line, Price, PriceDetail, ProfilePic, Reviews, ReviewsItem, ReviewsItemUser, ReviewsItemUserImg, ReviewsItemUserInfo, ReviewsItemUserInfoName, ReviewsTitle, Right, Seller, SellerTitle, StarImg, StarNumber, User, UserName, UserSeller, UserSellerBox, UserSellerBoxItens, UserSellerContact, UserSellerImg, UserSellerInfo, UserSellerName } from "./Styles"
 
 export const House = () => {
   return (
@@ -177,7 +177,33 @@ export const House = () => {
             </Reviews>
           </Left>
           <Right>
-
+            <Price>
+              <HouseTitle>Titulo da Casa</HouseTitle>
+              <HousePrice>$ 55.55</HousePrice>              
+            </Price>
+            <PriceDetail>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero eum nemo nulla natus accusantium quas animi, 
+              facilis sint eveniet aperiam eligendi velit repellat officiis earum fuga, aspernatur tenetur, aliquam sed.
+              </PriceDetail>
+            <Detail>
+              <DetailItem>
+                <CheckImg src="https://w7.pngwing.com/pngs/633/576/png-transparent-check-mark-scalable-graphics-green-tick-angle-leaf-logo.png" alt="" />
+                <CheckInfo>2 Quartos</CheckInfo>
+              </DetailItem>
+              <DetailItem>
+                <CheckImg src="https://w7.pngwing.com/pngs/633/576/png-transparent-check-mark-scalable-graphics-green-tick-angle-leaf-logo.png" alt="" />
+                <CheckInfo>2 Banheiros</CheckInfo>
+              </DetailItem>
+              <DetailItem>
+                <CheckImg src="https://w7.pngwing.com/pngs/633/576/png-transparent-check-mark-scalable-graphics-green-tick-angle-leaf-logo.png" alt="" />
+                <CheckInfo>1 Sala de Estar</CheckInfo>
+              </DetailItem>
+              <DetailItem>
+                <CheckImg src="https://w7.pngwing.com/pngs/633/576/png-transparent-check-mark-scalable-graphics-green-tick-angle-leaf-logo.png" alt="" />
+                <CheckInfo>1 Cozinha</CheckInfo>
+              </DetailItem>
+            </Detail>
+            <DetailButton>Seguir</DetailButton>
           </Right>
         </Container>
     </HouseContainer>

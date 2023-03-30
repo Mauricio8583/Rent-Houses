@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link, useLocation } from "react-router-dom"
-import { ButtonLinks, Container, Links, Logo, Menu, NavbarContainer, Options, OptionsSpan, Text, TextLinks, User, Username, UserProfilePic } from "./Styles"
+import { ButtonLinks, Container, Links, Logo, Menu, MenuSpan, NavbarContainer, Options, OptionsSpan, Text, TextLinks, User, Username, UserProfilePic } from "./Styles"
 
 interface IUser {
   id: Number,
@@ -84,10 +84,14 @@ export const Navbar = () => {
             </Links>            
         </Container>
         {isActive && (
+          <>
           <Menu>
-          <span>Test</span>
-          <span>Test 2</span>              
+            <MenuSpan>User</MenuSpan> 
+            <MenuSpan>Configurações</MenuSpan>                                            
           </Menu>
+          <hr />
+          </>
+          
         )}
     </NavbarContainer>
   )
