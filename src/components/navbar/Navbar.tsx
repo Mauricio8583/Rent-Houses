@@ -60,7 +60,7 @@ export const Navbar = () => {
                 {open && <Options>
                   {currentUser?.isSeller && (
                     <>
-                    <Link to="/houses" style={{textDecoration: 'none', color: 'inherit'}}>
+                    <Link to="/myhouses" style={{textDecoration: 'none', color: 'inherit'}}>
                       <OptionsSpan>Casas</OptionsSpan>
                     </Link>
                     <Link to="/add" style={{textDecoration: 'none', color: 'inherit'}}>
@@ -82,17 +82,7 @@ export const Navbar = () => {
               </User>
              )}                
             </Links>            
-        </Container>
-        {isActive && (
-          <>
-          <Menu>
-            <MenuSpan>User</MenuSpan> 
-            <MenuSpan>Configurações</MenuSpan>                                            
-          </Menu>
-          <hr />
-          </>
-          
-        )}
+        </Container>        
     </NavbarContainer>
   )
 }
