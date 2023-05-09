@@ -1,6 +1,8 @@
 import express from "express"
 import mongoose from "mongoose"
 import dotenv from "dotenv"
+import userRoute from "./routes/user.route.js"
+import authRoute from "./routes/auth.route.js"
 
 const app = express();
 
@@ -15,6 +17,11 @@ const connect = async () => {
          console.log(err)
      }
 }
+
+app.use(express.json());
+
+app.use("/api/users", userRoute);
+app.use("/api/users/auth", authRoute);
 
 app.listen(8000, () => {
     connect()
