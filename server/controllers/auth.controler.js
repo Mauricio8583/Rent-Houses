@@ -1,5 +1,6 @@
 import User from "../models/user.module.js"
 import bcrypt from "bcrypt"
+import jwt from "jsonwebtoken"
 
 export const register = async (req, res) => {
     try{
@@ -29,8 +30,13 @@ export const login = async (req, res) => {
 
         if(!isCorrect) return res.status(400).send("Invalid password or username")
 
+        const token = jwt.sign({
+            id: user._id,
+            isSeller: user.isSeller
+        }, process.env.JWT_KEY)
+
         const {password, ...info} = user._doc;
-        res.status(200).send(info);
+        res.cookie("access_token", token, { httpOnly: true}).status(200).send(info);        
 
     }catch(err){
         res.status(500).send("Something went wrong")                      
